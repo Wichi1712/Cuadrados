@@ -28,6 +28,7 @@
             <string>/// @description gameState = gamePlay
 // Puede escribir su código en este editor
 //global.gameState = "gamePlay";
+level=0squares=0;
 </string>
           </argument>
         </arguments>
@@ -89,8 +90,10 @@ switch (global.gameState) {
 if (global.gameState == "gamePlay"){
     draw_set_font(Font_Init);
     draw_set_halign(fa_center)
-    draw_text(room_width div 2, 20,"SQUARE");
-    draw_text(64,64,"LEVEL");
+    draw_text(room_width div 2, 20,"SQUARE");//Title game
+    draw_text(96,32,"Total Squares = 1024")//+string(o_drawSquare.cuadradosV*o_drawSquare.cuadradosH));
+    draw_text(64,64,"Level = " + string(level));
+    draw_text(192,64,"Squares = "+string(squares));//number total squares
 }else
 if (global.gameState == "gameOver"){
     draw_set_font(font_gameOver)

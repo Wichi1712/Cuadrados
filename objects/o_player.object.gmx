@@ -28,6 +28,7 @@
             <string>///Posicion inicial
 x = 32;
 y = 96;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -54,19 +55,19 @@ y = 96;
 if (global.gameState == "gamePlay") {
     //Move horizontal
     if (keyboard_check_pressed( vk_left) &amp;&amp; x &gt; 32){
-    image_xscale = -1;
+    image_xscale = -1;image_index = 0;
     x -= 32;
     }
     if (keyboard_check_pressed( vk_right) &amp;&amp; x &lt; room_width -32){
-    image_xscale = 1;
+    image_xscale = 1;image_index = 0;
     x += 32;
     }
     //Move vertical
     if (keyboard_check_pressed( vk_up) &amp;&amp; y &gt; 96){
-    y -= 32;
+    y -= 32;image_index = 1;
     }
     if (keyboard_check_pressed( vk_down) &amp;&amp; y &lt; room_height - 32){
-    y += 32;
+    y += 32;image_index = 2;
     }
 
     //Test
@@ -75,6 +76,7 @@ if (global.gameState == "gamePlay") {
     //Pinta cuadros
     if (place_empty(x,y)){// place_free(x,y)){
         instance_create(x,y, o_cuadradoPlayer);
+        o_gameState.squares++;
     }
 
     //----------------WIN------------------------------

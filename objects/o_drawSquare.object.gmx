@@ -63,7 +63,7 @@ for (i=cuadradosH; i&lt;room_width ; i+=cuadradosH)
 {
     for (j=cuadradosV + areaData; j&lt;room_height; j+=cuadradosV)
     {
-        draw_sprite(spr_squareBlue,0,i,j);
+        draw_sprite(spr_squareBase,0,i,j);
     };
 };
 

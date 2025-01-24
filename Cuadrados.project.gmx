@@ -6,7 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_squareBlue</sprite>
+    <sprite>sprites\spr_squareBase</sprite>
     <sprite>sprites\spr_squarePlayer</sprite>
     <sprite>sprites\spr_playerTest</sprite>
     <sprite>sprites\spr_enemyYellow</sprite>
